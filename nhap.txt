@@ -1,0 +1,36 @@
+Nhóm lệnh DDL: là nhóm lệnh liên quan đến cấu trúc, định nghĩa 1 bảng
+- CREATE : tạo (create database, create table)
+- ALTER : sửa (alter table, alter column)
+- DROP : xóa (drop database, drop table, drop column)
+
+Nhóm lệnh DML: là nhóm lệnh liên quan để thao tác với dữ liệu trong bảng
+- SELECT : truy vấn lấy dữ liệu trong bảng
+- INSERT : thêm dữ liệu vào bảng
+- UPDATE : sửa dữ liệu trong bảng
+- DELETE : xóa dữ liệu trong bảng
+
+CONSTRAINT: ràng buộc 
+- PRIMARY KEY : 1 bảng chỉ có 1 khóa chính, không được trùng lặp, không được NULL 
+			và nó giúp phân biệt từng dòng dữ liệu trong bảng là duy nhất
+- FOREIGN KEY : 1 bảng có thể có nhiều khóa ngoại, nó tham chiếu tới khóa chính của bảng khác giúp bảo đảm
+			tính đúng đắn và toàn vẹn của dữ liệu
+Cú pháp: [tên cột] FOREIGN KEY REFERENCES [tên bảng](tên cột)
+- UNIQUE :
+- CHECK :
+- DEFAULT :
+- NULL | NOT NULL : được phép để trống dữ liệu hay không được
+
+VD:
+Lớp học chứa khóa chính mã lớp học
+sinh viên có khóa ngoại là mã lớp học: ma_lop char(7) FOREIGN KEY REFERENCES LOPHOC(ma_lop)
+
+tạo CSDL -> tạo các bảng -> ALter bảng -> Insert data -> SELECT data
+
+Customers: khách hàng
+Category: danh mục
+product: sản phẩm 
+order: đơn hàng
+shipments: giaohang
+orderdetail: chi tiết đơn hàng
+
+
